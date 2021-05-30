@@ -8,6 +8,7 @@
   --white: hsl(0, 0%, 100%);
   --body-white: hsla(0, 0%, 100%, 0.75);
   --stats-heading-white: hsla(0, 0%, 100%, 0.6);
+  --background-color: hsl(233, 47%, 7%);
 }
 
 *, *::before, *::after {
@@ -31,6 +32,7 @@ body {
   padding: 2rem;
   justify-content: center;
   align-items: center;
+  background-color: var(--background-color);
 }
 
 .main-section {
@@ -88,4 +90,36 @@ body {
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.2rem;
+}
+
+@media only screen and (min-width: 1440px) {
+  .main-section {
+    max-width: 100rem;
+    flex-direction: row;
+  }
+  .header {
+    height: auto;
+    width: 120rem;
+    border-radius: 0 1rem 1rem 0;
+    background-image: linear-gradient(var(--light-violet-transparent),var(--light-violet-transparent)),url(images/image-header-desktop.jpg);
+    background-size: cover;
+  }
+  .body {
+    border-radius: 1rem 0 0 1rem;
+    padding: 5rem 8rem;
+  }
+  .body-title {
+    text-align: left;
+    font-size: 3rem;
+  }
+  .body-content {
+    text-align: left;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+  }
+  .body-list {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
 }
